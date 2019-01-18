@@ -1,5 +1,26 @@
 @extends('layouts.base')
 
 @section('content')
-    You are logged in!
+
+    <h1 class="pageHeadingBig">You Might Also Like</h1>
+
+    <div class="gridViewContainer">
+
+        @foreach($albums as $album)
+
+            <div class='gridViewItem'>
+                <a href="#">
+                    <img src='{{ $album->album_image }}'>
+
+                    <div class='gridViewInfo'>
+                        {{ $album->title }}
+                    </div>
+                </a>
+
+            </div>
+
+        @endforeach
+
+    </div>
+
 @endsection
