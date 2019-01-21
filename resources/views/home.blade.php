@@ -9,7 +9,7 @@
         @foreach($albums as $album)
 
             <div class='gridViewItem'>
-                <a href="#">
+                <a href="{{ route('albums.show', $album->id) }}">
                     <img src='{{ $album->album_image }}'>
 
                     <div class='gridViewInfo'>

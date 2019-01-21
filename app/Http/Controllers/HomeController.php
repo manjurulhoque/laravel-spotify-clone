@@ -19,4 +19,11 @@ class HomeController extends Controller
 
         return view('home', compact('albums'));
     }
+
+    public function show(Album $album)
+    {
+        $album->with(['songs', 'artist']);
+
+        return view('album-show', compact('album'));
+    }
 }
