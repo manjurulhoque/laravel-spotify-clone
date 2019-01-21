@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('albums/{album}', 'HomeController@show')->name('albums.show');
+
+    // user settings
+    Route::view('profile/settings', 'settings')->name('profile.settings');
+    Route::view('profile/edit', 'profile-update')->name('profile.edit');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

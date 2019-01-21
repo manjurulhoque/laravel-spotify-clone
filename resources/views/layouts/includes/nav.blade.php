@@ -11,7 +11,7 @@
             <div class="navItem">
 				<span role='link' tabindex='0' class="navItemLink">
 					Search
-					<img src="images/icons/search.png" class="icon" alt="Search">
+					<img src="{{ asset('images/icons/search.png') }}" class="icon" alt="Search">
 				</span>
             </div>
 
@@ -19,7 +19,7 @@
 
         <div class="group">
             <div class="navItem">
-                <span role="link" tabindex="0" onclick="openPage('browse.php')" class="navItemLink">Browse</span>
+                <a href="/home" tabindex="0" class="navItemLink">Browse</a>
             </div>
 
             <div class="navItem">
@@ -27,8 +27,7 @@
             </div>
 
             <div class="navItem">
-                <span role="link" tabindex="0" onclick="openPage('settings.php')"
-                      class="navItemLink">{{ auth()->user()->full_name }}</span>
+                <a href="{{ route('profile.settings') }}" class="navItemLink">{{ auth()->user()->full_name }}</a>
             </div>
         </div>
 

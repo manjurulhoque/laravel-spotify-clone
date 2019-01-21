@@ -49,6 +49,9 @@
 
     <nav class="optionsMenu">
         <input type="hidden" class="songId">
+        <select class="item playlist">
+            <option value="">Add to playlist</option>
+        </select>
     </nav>
 
 @endsection
